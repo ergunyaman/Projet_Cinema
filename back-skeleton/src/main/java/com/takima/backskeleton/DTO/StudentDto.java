@@ -1,8 +1,7 @@
 package com.takima.backskeleton.DTO;
 
-import com.takima.backskeleton.models.Course;
-import com.takima.backskeleton.models.Major;
-import com.takima.backskeleton.models.Student;
+import com.takima.backskeleton.models.*;
+
 import lombok.Builder;
 import lombok.Getter;
 import org.springframework.web.multipart.MultipartFile;

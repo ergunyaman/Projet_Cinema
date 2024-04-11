@@ -1,28 +1,24 @@
 package com.takima.backskeleton.DTO;
 
-import com.takima.backskeleton.models.Student;
+import com.takima.backskeleton.models.Utilisateur;
 
 import java.io.IOException;
 
-public class StudentMapper {
-    public static Student fromDto(StudentDto dto, Long id) throws IOException {
-        return new Student.Builder()
-                .id(id)
-                .firstName(dto.getFirstName())
-                .lastName(dto.getLastName())
-                .birthdate(dto.getBirthdate())
-                .courses(dto.getCourses())
-                .major(dto.getMajor())
+public class UtilisateurMapper {
+    public static Utilisateur fromDto(UtilisateurDto dto, Long Id_User) throws IOException {
+        return new Utilisateur.Builder()
+                .Id_User(Id_User)
+                .Nom(dto.getNom())
+                .Prenom(dto.getPrenom())
+                .Mail(dto.getMail())
                 .build();
     }
 
-    public static StudentDto toDto (Student student){
-        return StudentDto.builder()
-                .firstName(student.getFirstName())
-                .lastName(student.getLastName())
-                .birthdate(student.getBirthdate())
-                .courses(student.getCourses())
-                .major(student.getMajor())
+    public static UtilisateurDto toDto(Utilisateur utilisateur){
+        return UtilisateurDto.builder()
+                .Nom(utilisateur.getNom())
+                .Prenom(utilisateur.getPrenom())
+                .Mail(utilisateur.getMail())
                 .build();
     }
 }
