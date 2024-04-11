@@ -18,12 +18,14 @@ public class Student {
     @Column(name = "last_name")
     private String lastName;
     private Instant birthdate;
+
     @ManyToMany
     @JoinTable(
             name = "student_course",
             joinColumns = @JoinColumn(name = "student_id"),
             inverseJoinColumns = @JoinColumn(name = "course_id"))
     private List<Course> courses;
+
     @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "major_id")
     private Major major;
