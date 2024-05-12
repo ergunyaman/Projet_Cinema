@@ -15,7 +15,7 @@ import { MatButtonModule } from "@angular/material/button"
 import { MajorsComponent } from "majors/majors.component"
 import { MajorStudentsComponent } from "majors/major-students/major-students.component"
 import { HttpClientModule } from "@angular/common/http"
-import { AfficheComponent } from "./affiche/affiche"
+import { AfficheComponent } from "./affiche/affiche.component"
 import { ReservationComponent } from "./reservation/reservation.component"
 import { ReservationUsersComponent } from "./reservation/reservation-details/reservation-details.component"
 
