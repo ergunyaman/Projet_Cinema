@@ -9,14 +9,25 @@ import { MajorsComponent } from "majors/majors.component"
 import { MajorsResolver } from "majors/majors.resolver"
 import { MajorStudentsResolver } from "majors/major-students/major-students.resolver"
 import { MajorStudentsComponent } from "majors/major-students/major-students.component"
+import { AfficheComponent } from "./affiche/affiche.component"
+import { AfficheResolver } from "./affiche/affiche.resolver"
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
+
+
   {
     path: "students",
     component: StudentsComponent,
     resolve: {
       students: StudentsResolver,
+    },
+  },
+  {
+    path: "affiche",
+    component: AfficheComponent,
+    resolve: {
+      seances: AfficheResolver,
     },
   },
   {

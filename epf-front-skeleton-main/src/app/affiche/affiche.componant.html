@@ -1,0 +1,30 @@
+<div class="d-flex align-items-center">
+  <h1>Seance</h1>
+  <a mat-raised-button color="primary" routerLink="/seance-details/new">New</a>
+</div>
+<table class="table table-hover">
+  <thead>
+  <tr>
+    <th scope="col">id_seance</th>
+    <th scope="col">id_film</th>
+    <th scope="col">id_salle</th>
+    <th scope="col">date_heure</th>
+    <th scope="col">prix</th>
+    <th scope="col">Delete</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let seance of (seancess$ | async)">
+    <td><a [routerLink]="'/affiche-details/' + seance.id_seance">{{ seance.id_seance }}</a></td>
+    <td>{{ seance.id_film }}</td>
+    <td>{{ seance.id_salle }}</td>
+    <td>{{ seance.date_heure | date : "dd/MM/yyyy" }}</td>
+    <td>{{ seance.prix }}</td>
+    <td>
+      <button mat-icon-button color="warn" (click)="deleteSeance($event, seance)">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </td>
+  </tr>
+  </tbody>
+</table>
