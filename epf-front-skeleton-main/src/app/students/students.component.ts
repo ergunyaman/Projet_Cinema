@@ -3,7 +3,6 @@ import { map, Observable } from "rxjs"
 import { Student } from "models/student.model"
 import { ActivatedRoute, Router } from "@angular/router"
 import { StudentService } from "services/student.service"
-
 @Component({
   selector: "epf-students",
   templateUrl: "./students.component.html",

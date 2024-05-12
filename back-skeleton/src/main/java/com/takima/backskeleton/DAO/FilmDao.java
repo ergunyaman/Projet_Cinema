@@ -19,7 +19,7 @@ public interface FilmDao extends JpaRepository<Film, Long> {
     List<Film> findByGenre(String genre);
 
     // Trouver des films par l'ID du réalisateur
-    @Query("SELECT f FROM Film f WHERE f.realisateur.id = :realisateurId")
+    @Query("SELECT f FROM Film f WHERE f.id_realisateur = :realisateurId")
     List<Film> findByRealisateurId(@Param("realisateurId") Long realisateurId);
 
     // Ajouter et mettre à jour des films, méthodes déjà fournies par JpaRepository

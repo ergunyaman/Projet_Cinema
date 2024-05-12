@@ -16,7 +16,9 @@ import { MajorsComponent } from "majors/majors.component"
 import { MajorStudentsComponent } from "majors/major-students/major-students.component"
 import { HttpClientModule } from "@angular/common/http"
 import { AfficheComponent } from "./affiche/affiche"
-import { ReservationComponent } from "./reservation/reservation"
+import { ReservationComponent } from "./reservation/reservation.component"
+import { ReservationUsersComponent } from "./reservation/reservation-details/reservation-details.component"
+
 
 @NgModule({
   declarations: [
@@ -29,6 +31,7 @@ import { ReservationComponent } from "./reservation/reservation"
     MajorStudentsComponent,
     AfficheComponent,
     ReservationComponent,
+    ReservationUsersComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +41,7 @@ import { ReservationComponent } from "./reservation/reservation"
     FormsModule,
     MatIconModule,
     MatButtonModule,
-    HttpClientModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
