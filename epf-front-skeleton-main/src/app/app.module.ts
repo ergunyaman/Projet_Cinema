@@ -15,9 +15,10 @@ import { MatButtonModule } from "@angular/material/button"
 import { MajorsComponent } from "majors/majors.component"
 import { MajorStudentsComponent } from "majors/major-students/major-students.component"
 import { HttpClientModule } from "@angular/common/http"
-import { AfficheComponent } from "./affiche/affiche.component"
-import { ReservationComponent } from "./reservation/reservation"
-import { AfficheDetailsComponent } from "./affiche/affiche-details/affiche-details.component"
+import { AfficheComponent } from "./affiche/affiche"
+import { ReservationComponent } from "./reservation/reservation.component"
+import { ReservationUsersComponent } from "./reservation/reservation-details/reservation-details.component"
+
 
 @NgModule({
   declarations: [
@@ -29,8 +30,8 @@ import { AfficheDetailsComponent } from "./affiche/affiche-details/affiche-detai
     MajorsComponent,
     MajorStudentsComponent,
     AfficheComponent,
-    AfficheDetailsComponent,
     ReservationComponent,
+    ReservationUsersComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +41,7 @@ import { AfficheDetailsComponent } from "./affiche/affiche-details/affiche-detai
     FormsModule,
     MatIconModule,
     MatButtonModule,
-    HttpClientModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
